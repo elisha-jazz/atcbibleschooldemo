@@ -267,74 +267,326 @@ footer {
 
 /*ABOUT US PAGE*/
 
-.about-div{
-    width: 100%;
-    height: 500px;
-    background-color: #111111;
+/* ==========================================
+   2. HEADER & NAVIGATION
+   ========================================== */
+.site-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Hide navigation menu by default on mobile */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Show menu only when active class is toggled via JS */
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    width: 100%;
+}
+
+.nav-links a {
+    display: block;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #222222;
+    border-bottom: 1px solid #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #0d6e38;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    background-color: #fafafa;
+    padding-left: 15px;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    border-bottom: none;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+.user-icon i {
+    font-size: 16px;
+}
+
+/* Desktop View Layout */
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        padding: 0;
+        gap: 25px;
+    }
+
+    .nav-links li {
+        width: auto;
+    }
+
+    .nav-links a {
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        padding: 10px 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+.user-icon i {
+    font-size: 16px;
+}
+
+/* Mobile Toggle Icon */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* ==========================================
+   3. HERO BANNER WITH BACKGROUND IMAGE
+   ========================================== */
+.hero-banner {
+    width: 100%;
+    height: 380px;
+    /* Replace with your image filename/path */
+    background-image: url('images/classroom.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* Subtle dark overlay for text contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner h1 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   4. MAIN CONTENT
+   ========================================== */
 .content-container {
     max-width: 900px;
-    margin: 0 auto;
-    padding-top: 30px;
-
+    margin: 50px auto;
+    padding: 0 20px;
 }
 
 .info-block p {
-    font-size: 13.5px;
-    color: #222222;
-    line-height: 1.85;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #444444;
     text-align: justify;
 }
 
 .inline-link {
-    color: #2e7d32;
-    text-decoration: none;
-    font-weight: 600;
+    color: #2b78bf;
+    text-decoration: underline;
 }
 
 .inline-link:hover {
-    text-decoration: underline;
+    color: #0d6e38;
 }
 
 .mission-block {
     margin-top: 40px;
-    text-align: center;
 }
 
 .mission-block h2 {
     font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 15px;
-    color: #111111;
+    color: #222222;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
 }
 
 .mission-intro {
-    font-size: 13.5px;
-    color: #222222;
-    margin-bottom: 20px;
-    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 15px;
 }
 
 .mission-list {
-    display: inline-block;
-    text-align: left;
-    max-width: 800px;
     padding-left: 20px;
 }
 
 .mission-list li {
-    font-size: 13.5px;
-    color: #222222;
-    line-height: 1.7;
     margin-bottom: 10px;
-    font-weight: 600;
+    font-size: 15px;
+    color: #444444;
 }
 
+/* ==========================================
+   5. FOOTER
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #eeeeee;
+    margin-top: 60px;
+    font-size: 13px;
+    color: #777777;
+}
 
-/*staff page*/
+/* ==========================================
+   6. RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================== */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        display: none; /* Toggle via JS by adding class 'show' */
+        padding: 20px 0;
+    }
+
+    .nav-menu.show {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 25px;
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background-color: #fafafa;
+        padding-left: 15px;
+        display: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    /* Hero Banner Mobile Styling */
+    .hero-banner {
+        height: 240px;
+    }
+
+    .hero-banner h1 {
+        font-size: 30px;
+    }
+
+    /* Main Content Mobile Adjustments */
+    .content-container {
+        margin: 30px auto;
+    }
+
+    .info-block p {
+        text-align: left;
+        font-size: 14px;
+    }
+}
+
 .page-title-banner {
     background-color: #f7f7f7;
     padding: 25px 0;
@@ -470,7 +722,6 @@ footer {
         border-radius: 50%;
     }
 }
-
 
 /*admissions page*/
 .admissions-container {
