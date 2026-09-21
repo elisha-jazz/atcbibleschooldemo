@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     const toggleIcon = navToggle.querySelector('i');
-    const dropdownTriggers = document.querySelectorAll('.dropdown > a');
+    const dropdownIcons = document.querySelectorAll('.dropdown > a .fa-chevron-down');
 
     // Toggle main navigation menu
     navToggle.addEventListener('click', () => {
@@ -18,12 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Toggle sub-menus on mobile screens
-    dropdownTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
+    // Toggle sub-menus when tapping the arrow icon on mobile
+    dropdownIcons.forEach(icon => {
+        icon.addEventListener('click', (e) => {
             if (window.innerWidth < 768) {
-                e.preventDefault(); // Prevent navigating away on touch
-                const dropdownParent = trigger.parentElement;
+                e.preventDefault();
+                e.stopPropagation(); // Prevents navigating away
+                const dropdownParent = icon.closest('.dropdown');
                 dropdownParent.classList.toggle('open');
             }
         });

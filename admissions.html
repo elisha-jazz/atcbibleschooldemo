@@ -9,45 +9,45 @@
 </head>
 <body>
 
-   <header>
-    <div class="nav-container">
-        <div class="logo">
-            <a href="index.html"><img src="images/200x80.png.png" alt="ATC Logo"></a>
-        </div>
-        
-        <!-- Added Hamburger Toggle Button -->
-        <button class="nav-toggle" aria-label="Toggle Navigation">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+   <header class="site-header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/200x80.png.png" alt="ATC Logo"></a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">HOME</a></li>
-                <li class="dropdown">
-                    <a href="about us.html" class="dropdown-trigger">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="staff.html">Staff</a></li>
-                        <li><a href="lecturers.html">Lecturers</a></li>
-                    </ul>
-                </li>
-                <li><a href="admissions.html">ADMISSIONS</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-trigger">PROGRAMS <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="mtp.html">Ministry Training Program</a></li>
-                        <li><a href="certificate.html">Certificate in Theology</a></li>
-                        <li><a href="associate.html">Associate Diploma</a></li>
-                        <li><a href="diploma.html">Diploma in Theology</a></li>
-                        <li><a href="degree.html">Bachelors in Theology</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://www.atc.org.sg/" target="_blank" rel="noopener noreferrer">ATC-SINGAPORE</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-                <li><a href="contact.html" class="user-icon"><i class="fa-solid fa-user"></i></a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="dropdown-trigger active">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="staff.html">Staff</a></li>
+                            <li><a href="lecturers.html">Lecturers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="admissions.html">ADMISSIONS</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-trigger">PROGRAMS <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mtp.html">Ministry Training Program</a></li>
+                            <li><a href="certificate.html">Certificate in Theology</a></li>
+                            <li><a href="associate.html">Associate Diploma</a></li>
+                            <li><a href="diploma.html">Diploma in Theology</a></li>
+                            <li><a href="degree.html">Bachelors in Theology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.atc.org.sg/" target="_blank" rel="noopener noreferrer">ATC-SINGAPORE</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.html" class="user-icon"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="page-title-banner">
         <h1>Admissions</h1>
     </div>
@@ -62,11 +62,11 @@
                 </div>
                 <h3>GENERAL</h3>
                 <ol class="requirements-list">
-                    <li>Applicants should have a minimum of two years as a committed Christian and active involvement in a local church community.</li>
-                    <li>Candidates must demonstrate alignment with lifestyle standards guided by biblical principles.</li>
-                    <li>Enrolled students are expected to follow institutional regulations and guidelines.</li>
-                    <li>The Ministry Training Program focuses on preparing individuals for ministry leadership and church development roles.</li>
-                    <li>First-time applicants are required to complete an English Language Assessment.</li>
+                    <li>Applicants must have been a born-again Christian for atleast 2 years and be part of a minstry in the church.</li>
+                    <li>Applicants must have already demonstrated their commitment to the Lordship of Jesus Christ through a Godly lifestyle.</li>
+                    <li>Applicants must be willing to abide by the regulations of ATC.</li>
+                    <li>The Ministry Training Program is recommended for students desiring Ministry Equipping and church planting training.</li>
+                    <li>First time applicants will be required to go through English Proficiency Test</li>
                 </ol>
             </div>
 
@@ -77,11 +77,11 @@
                 <h3>GENERAL REQUIREMENTS</h3>
                 <ol class="requirements-list">
                     <li>Two passport-sized photographs.</li>
-                    <li>A one-page personal statement outlining faith background and ministry interest.</li>
-                    <li>A formal recommendation letter from the applicant's Senior Pastor.</li>
-                    <li>Photocopies of relevant academic credentials and certificates.</li>
-                    <li>Application forms must be endorsed by the applicant's pastor prior to submission.</li>
-                    <li>Submission of applications must be completed two months before the semester begins.</li>
+                    <li>One page written testimony of conversion and call to ministry.</li>
+                    <li>A written recommendation by the applicant's Senior Pastor.</li>
+                    <li>A photocopy of all relevant academic certificates.</li>
+                    <li>The application form needs to be duly signed by their respective pastors before submitting to ATC's Administration Offices.</li>
+                    <li>The application form HAS TO BE SUBMITTED to ATC's Administration Office TWO MONTHS BEFORE the commencement of the new semester.</li>
                 </ol>
             </div>
             <div class="grid-card">
@@ -90,13 +90,12 @@
                 </div>
                 <h3>FULL-TIME STUDENT REQUIREMENTS</h3>
                 <ol class="requirements-list">
-                    <li>Personal bedding items, including mattress, pillowcases, and bedsheets.</li>
-                    <li>Basic academic stationery such as pens, notebooks, and rulers.</li>
-                    <li>Personal dining items, including a cup, plate, bowl, and cutlery set.</li>
-                    <li>Personal care and hygiene supplies.</li>
-                    <li>General living items and appropriate attire.</li>
-                    <li>Provision for personal return travel expenses.</li>
-                    <li>Sufficient funds to cover incidental personal needs.</li>
+                    <li>Blankets, Pillowcases and Bed sheets.</li>
+                    <li>Pens, pencils and other stationaries such as: Ruler, Eraser, sharpener, files for notes, if desired</li>
+                    <li>Cup, plate, bowl, water bottle, fork and spoon</li>
+                    <li>Toothbrush, toothpaste, comb, face or bathing towel ans soap (for bathing and washing clothes)</li>
+                    <li>Any other personal hygiene needs such as: shoe polish, shampoo, deodrants, slippers, etc.</li>
+                    <li>Enough money for transport back to home church.</li>
                 </ol>
             </div>
 
@@ -108,8 +107,8 @@
                 <ol class="requirements-list">
                     <li>Step 1: Academic Document Evaluation</li>
                     <li>Step 2: Admissions Interview</li>
-                    <li>Step 3: English Language Assessment</li>
-                    <li>Step 4: Final Verification and Admission Selection</li>
+                    <li>Step 3: English Proficiency Test</li>
+                    <li>Step 4: Final Review and Admissions Selection</li>
                 </ol>
             </div>
         </section>
@@ -120,16 +119,19 @@
 
         <section class="admissions-description">
             <p>
-                The primary objective of the Africa Theological Centre is to provide comprehensive biblical instruction across all academic programs. The curriculum focuses on expanding theological knowledge while applying practical principles to daily ministry and community service.
+                The unique goal of the Africa Theological Center is to teach you the entirety of God's Word-verse by verse-through the entire 
+                Bible in just two years. Our main goal is to know God through His written and live word, which is the most significant knowledge 
+                in the entire universe. The purpose of this practical application of the understanding of God and His unchanging love is to serve 
+                Jesus Christ by serving others and pointing them toward Him.
             </p>
 
             <p class="prereq-intro">
-                Applicants pursuing Certificate and Associate programs must meet the following entry criteria:
+                Certificates and Associate: students and above must have completed:
             </p>
             <ol class="prereq-list">
-                <li>Completion of at least four years of secondary education (O-Level) or an equivalent qualification.</li>
-                <li>Demonstrated capability to read, write, and communicate clearly in English.</li>
-                <li>Completion of foundational discipleship or ministry training modules where applicable.</li>
+                <li>At least four years of secondary (O' Level) education. In addition,</li>
+                <li>They MUST be ablr to read and write fluently in English. Lastly,</li>
+                <li>They MUST have completed: Life in the Word Level 1 and Growth Track 1 and 2.</li>
             </ol>
         </section>
 
